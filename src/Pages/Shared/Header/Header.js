@@ -8,7 +8,7 @@ import logo from '../../../images/logo.png';
 
 
 const Header = () => {
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth) 
  
 
 
@@ -38,10 +38,17 @@ const Header = () => {
           </Nav>
           <Nav>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
+            {
+              user && <>
+            <Nav.Link as={Link} to="/addservice">Add</Nav.Link>
+            <Nav.Link as={Link} to="/manage">Manage</Nav.Link>
+                
+              </>
+            }
             { 
               user ? 
               <Link to='/login'>
-                 <button  className='signOut-btn' onClick={handleSignOut}>SignOut</button>
+                  <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>sign out</button>
               </Link>
 
               :

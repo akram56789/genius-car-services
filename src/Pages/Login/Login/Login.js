@@ -84,9 +84,9 @@ const Login = () => {
             </Form>
             {errorElement}
             <p className='mx-auto'>আপনি এখানে নতুন?    <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>ক্লিক করুন</Link></p>
-            <p className='mx-auto'>আপনি কি পাসওয়ার্ড ভুলে গেছেন?    <button   className=' btn btn-linktext-primary pe-auto text-decoration-none' onClick={risetPassword}>পাসওয়ার্ড রিসেট দিন</button></p>
+            <p className='mx-auto'>আপনি কি পাসওয়ার্ড ভুলে গেছেন?    <button   className=' btn btn-linktext-danger pe-auto text-decoration-none' onClick={risetPassword}>পাসওয়ার্ড রিসেট দিন</button></p>
             <SocialLogin></SocialLogin>
-            <ToastContainer />
+            <ToastContainer  />
 
         </div>
     );
